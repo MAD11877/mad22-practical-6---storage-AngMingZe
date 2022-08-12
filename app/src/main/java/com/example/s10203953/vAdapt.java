@@ -1,5 +1,6 @@
 package com.example.s10203953;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -31,11 +32,9 @@ public class vAdapt extends RecyclerView.Adapter<vHolder> {
         return new vHolder(item);
     }
 
-    /*
     @Override
-    public void onBindViewHolder(@NonNull vHolder holder) {
+    public void onBindViewHolder(@NonNull vHolder holder,int position) {
         //name
-        int position = holder.getAdapterPosition();
         String n = data.get(position).name;
         holder.name.setText(n);
         //description
@@ -74,12 +73,6 @@ public class vAdapt extends RecyclerView.Adapter<vHolder> {
                         }).show();
             }
         });
-    }
-    */
-
-    @Override
-    public void onBindViewHolder(@NonNull vHolder holder,int position){
-        //do nth
     }
 
     @Override
